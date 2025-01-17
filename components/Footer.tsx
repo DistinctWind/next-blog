@@ -1,4 +1,6 @@
 import Link from './Link'
+import Image from 'next/image'
+import police from 'public/static/police.png'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 
@@ -25,6 +27,14 @@ export default function Footer() {
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{` • `}</div>
           <Link href="/">{siteMetadata.title}</Link>
+        </div>
+        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
+          <Link href="https://beian.miit.gov.cn/">粤ICP备2024211650号-1</Link>
+          <div>{` • `}</div>
+          <Image src={police} alt="police" width={18} />
+          <Link href="https://beian.mps.gov.cn/#/query/webSearch?code=44011302004378">
+            粤公网安备44011302004378号
+          </Link>
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
           <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">
